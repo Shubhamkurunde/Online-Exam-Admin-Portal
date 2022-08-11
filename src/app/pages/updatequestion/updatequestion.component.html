@@ -1,0 +1,36 @@
+<div class="update">
+<h1>Update Question</h1>
+<form *ngIf="question" [formGroup]="update" (submit)="updateQuestion()">
+    <div class="mb-3">
+        <label class="form-label">Question </label>
+        <input type="text" name="question_title"  formControlName="question_title" class="form-control"
+            placeholder="Enter question title">
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label class="form-label">Option 1</label><br>
+            <input type="text" class="form-control" name="option_1"  formControlName="option_1">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Option 2</label><br>
+            <input type="text" class="form-control" name="option_2"  formControlName="option_2">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Option 3</label><br>
+            <input type="text" class="form-control" name="option_3"  formControlName="option_3">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Option 4</label><br>
+            <input type="text" class="form-control" name="option_4"  formControlName="option_4">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label"></label><br>
+            <input type="text" class="form-control" name="correct_answer"  formControlName="correct_answer">
+        </div>
+    </div><br>
+    <div class="col-md-6">
+        <button class="btn btn-outline-secondary">Submit</button>
+    </div>
+    <hr>
+</form>
+</div>

@@ -1,0 +1,42 @@
+<div class="container add">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Add Question</h3>
+            <form (submit)="add()">
+                <div class="mb-3">
+                    <label class="form-label">Question Title</label>
+                    <input type="text" [(ngModel)]="question.question_title" name="question_title" class="form-control" placeholder="Enter question title">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Exam Id</label><br>
+                    <input type="number" [(ngModel)]="question.exam_id" class="form-control" name="exam_id" placeholder="Enter exam id">
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-label">Option 1</label><br>
+                        <input type="text" [(ngModel)]="question.option_1" class="form-control" name="option_1" placeholder="Enter option 1">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Option 2</label><br>
+                        <input type="text" [(ngModel)]="question.option_2" class="form-control" name="option_2" placeholder="Enter option 2">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Option 3</label><br>
+                        <input type="text" [(ngModel)]="question.option_3" class="form-control" name="option_3" placeholder="Enter option 3">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Option 4</label><br>
+                        <input type="text" [(ngModel)]="question.option_4" class="form-control" name="option_4" placeholder="Enter option 4">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Correct Answer</label><br>
+                        <input type="text" [(ngModel)]="question.correct_answer" class="form-control" name="correct_answer" placeholder="Enter correct answer">
+                    </div>
+                </div><br>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn btn-outline-info"  [routerLink]="['/home','view']">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

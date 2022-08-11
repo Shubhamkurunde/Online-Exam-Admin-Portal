@@ -1,0 +1,48 @@
+<div class="container view">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>All Question</h3>
+            <!-- <pre>{{this._admin.questions | json }}</pre> -->
+            <form *ngFor="let question of this._admin.questions">
+                <div class="mb-3">
+                    <label class="form-label">Question {{question.question_id}}</label>
+                    <input type="text" name="question_title" class="form-control" placeholder="Enter question title"
+                        [value]="question.question_title" readonly>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-label">Option 1</label><br>
+                        <input type="text" class="form-control" name="option_1" placeholder="Enter option 1"
+                            [value]="question.option_1" readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Option 2</label><br>
+                        <input type="text" class="form-control" name="option_2" placeholder="Enter option 2"
+                            [value]="question.option_2" readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Option 3</label><br>
+                        <input type="text" class="form-control" name="option_3" placeholder="Enter option 3"
+                            [value]="question.option_3" readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Option 4</label><br>
+                        <input type="text" class="form-control" name="option_4" placeholder="Enter option 4"
+                            [value]="question.option_4" readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Correct Answer</label><br>
+                        <input type="text" class="form-control" name="correct_answer" placeholder="Enter correct answer"
+                            [value]="question.correct_answer" readonly>
+                    </div>
+                </div><br>
+                <div class="col-md-6">
+                    <button class="btn btn-danger" (click)="delete(question.question_id)">Delete</button>
+                    <button class="btn btn-outline-secondary"
+                        [routerLink]="['/home','update',question.question_id]">Update</button>
+                </div>
+                <hr>
+            </form>
+        </div>
+    </div>
+</div>

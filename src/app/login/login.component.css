@@ -1,0 +1,41 @@
+.body {
+    background-color: lightcoral;
+    padding-bottom: 125px;
+    /* margin-top: 25px; */
+}
+
+.text-center {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.pwd {
+    color: #0d6efd;
+    font-size: 21px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.pwd:hover {
+    text-decoration: underline;
+}
+
+.login {
+    width: 80%;
+    margin-left: 80px;
+    background-color: white;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 95px;
+}
+
+.btn {
+    width: 20%;
+    border-radius: 20px;
+}
+
+.signup {
+    float: right;
+    padding-right: 30px;
+}

@@ -1,0 +1,25 @@
+<div class="body">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h4 class="text-center">Login Here !!</h4>
+            <hr>
+            <form [formGroup]="loginForm" (submit)="login()" class="login lgn">
+                <div class="mb-3">
+                    <label class="form-label">Username</label>
+                    <input type="text" class="form-control" placeholder="Enter username" formControlName="username">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" placeholder="Enter password"  formControlName="password">
+                </div>
+                <!-- <div class="md-3" style="text-align: center;">
+                    <button type="button" class="btn btn-outline-secondary btn-lg" [routerLink]="['/home']">Forgot Password?</button>
+                </div><br> -->
+                <div class="md-3" style="text-align:center;">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button style="margin-left: 10px;" class="btn btn-danger" [routerLink]="['/home']">Reset</button>
+                </div><br>
+            </form>
+        </div>
+    </div>
+</div>
