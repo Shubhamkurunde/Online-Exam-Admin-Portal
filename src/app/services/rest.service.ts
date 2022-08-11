@@ -14,6 +14,7 @@ export class RestService {
   }
 
   add_question(data: any) {
+    this._admin.checkToken();
     const headers = new HttpHeaders({ 'token': this._admin.token });
     return this._http.post(environment.url + '/add_question', data, { headers });
   }

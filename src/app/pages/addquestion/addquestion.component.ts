@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RestService } from 'src/app/services/rest.service';
 
 @Component({
@@ -18,8 +19,8 @@ export class AddquestionComponent implements OnInit {
     correct_answer: ''
   }
 
-  constructor(private _rest: RestService) { }
-
+  constructor(private _rest: RestService, private _router:Router) { }
+  
   ngOnInit(): void {
   }
 
@@ -31,6 +32,7 @@ export class AddquestionComponent implements OnInit {
       console.log(err);
       alert('Somthing went Wrong');
     });
+    this._router.navigate(['/home','view'])
   }
 
 }

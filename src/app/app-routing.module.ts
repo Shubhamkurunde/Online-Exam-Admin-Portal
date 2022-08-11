@@ -16,7 +16,7 @@ const routes: Routes = [
       { path: 'update/:question_id', component: UpdatequestionComponent }
     ]
   },
-  { path: '**', redirectTo: 'login' }
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({

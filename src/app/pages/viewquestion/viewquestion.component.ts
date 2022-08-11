@@ -32,7 +32,6 @@ export class ViewquestionComponent implements OnInit {
         console.log(data);
       }, err => {
         console.log(err);
-        this.get_all_question();
       });
     }
   }
